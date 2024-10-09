@@ -21,11 +21,11 @@ function carregaUser() {
     const lista = document.getElementById("lista");
     lista.innerHTML = '';
 
-    for (let i = 0; i < users.length; i++) {
+    users.forEach(user => {
         const li = document.createElement("li");
-        li.textContent = `nome: ${users[i].nome} idade: ${users[i].idade}`;
+        li.textContent = `nome: ${user.nome} idade: ${user.idade}`;
         lista.appendChild(li);
-    }
+    });
 }
 
 window.onload = carregaUser;
